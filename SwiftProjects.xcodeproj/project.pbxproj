@@ -11,6 +11,9 @@
 		656063932484A65B00E97058 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063922484A65B00E97058 /* Storyboarded.swift */; };
 		656063982484A77B00E97058 /* NetworkSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063952484A77B00E97058 /* NetworkSetup.swift */; };
 		656063992484A77B00E97058 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063962484A77B00E97058 /* APIController.swift */; };
+		656063A32484AF8100E97058 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6560639C2484AF8100E97058 /* UIColor+HexString.swift */; };
+		656063A62484AF8100E97058 /* UIStoryboard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6560639F2484AF8100E97058 /* UIStoryboard+Instantiate.swift */; };
+		656063A92484AF8100E97058 /* UIViewController+ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063A22484AF8100E97058 /* UIViewController+ProgressHUD.swift */; };
 		656478312482125D00FB843E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656478302482125D00FB843E /* AppDelegate.swift */; };
 		6564783A2482126000FB843E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656478392482126000FB843E /* Assets.xcassets */; };
 		6564783D2482126000FB843E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6564783B2482126000FB843E /* LaunchScreen.storyboard */; };
@@ -35,6 +38,9 @@
 		656063922484A65B00E97058 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		656063952484A77B00E97058 /* NetworkSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSetup.swift; sourceTree = "<group>"; };
 		656063962484A77B00E97058 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		6560639C2484AF8100E97058 /* UIColor+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
+		6560639F2484AF8100E97058 /* UIStoryboard+Instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Instantiate.swift"; sourceTree = "<group>"; };
+		656063A22484AF8100E97058 /* UIViewController+ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ProgressHUD.swift"; sourceTree = "<group>"; };
 		6564782D2482125D00FB843E /* SwiftProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656478302482125D00FB843E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		656478392482126000FB843E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +112,16 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		6560639B2484AF8100E97058 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6560639C2484AF8100E97058 /* UIColor+HexString.swift */,
+				6560639F2484AF8100E97058 /* UIStoryboard+Instantiate.swift */,
+				656063A22484AF8100E97058 /* UIViewController+ProgressHUD.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		656478242482125D00FB843E = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +186,7 @@
 		656478542482216F00FB843E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				6560639B2484AF8100E97058 /* UIKit */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -399,11 +416,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656063A32484AF8100E97058 /* UIColor+HexString.swift in Sources */,
 				656063982484A77B00E97058 /* NetworkSetup.swift in Sources */,
 				656063992484A77B00E97058 /* APIController.swift in Sources */,
+				656063A92484AF8100E97058 /* UIViewController+ProgressHUD.swift in Sources */,
 				656063912484956E00E97058 /* Strings.swift in Sources */,
 				656478312482125D00FB843E /* AppDelegate.swift in Sources */,
 				656063932484A65B00E97058 /* Storyboarded.swift in Sources */,
+				656063A62484AF8100E97058 /* UIStoryboard+Instantiate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
