@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		656063912484956E00E97058 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063902484956E00E97058 /* Strings.swift */; };
+		656063932484A65B00E97058 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063922484A65B00E97058 /* Storyboarded.swift */; };
+		656063982484A77B00E97058 /* NetworkSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063952484A77B00E97058 /* NetworkSetup.swift */; };
+		656063992484A77B00E97058 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063962484A77B00E97058 /* APIController.swift */; };
 		656478312482125D00FB843E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656478302482125D00FB843E /* AppDelegate.swift */; };
-		656478332482125D00FB843E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656478322482125D00FB843E /* SceneDelegate.swift */; };
-		656478352482125D00FB843E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656478342482125D00FB843E /* ViewController.swift */; };
-		656478382482125D00FB843E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656478362482125D00FB843E /* Main.storyboard */; };
 		6564783A2482126000FB843E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656478392482126000FB843E /* Assets.xcassets */; };
 		6564783D2482126000FB843E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6564783B2482126000FB843E /* LaunchScreen.storyboard */; };
 		656478482482126000FB843E /* SwiftProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656478472482126000FB843E /* SwiftProjectsTests.swift */; };
@@ -30,11 +31,12 @@
 
 /* Begin PBXFileReference section */
 		2C88491DB8DD835078C4CC9E /* Pods-SwiftProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjects.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects.debug.xcconfig"; sourceTree = "<group>"; };
+		656063902484956E00E97058 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		656063922484A65B00E97058 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		656063952484A77B00E97058 /* NetworkSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSetup.swift; sourceTree = "<group>"; };
+		656063962484A77B00E97058 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		6564782D2482125D00FB843E /* SwiftProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656478302482125D00FB843E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		656478322482125D00FB843E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		656478342482125D00FB843E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		656478372482125D00FB843E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		656478392482126000FB843E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6564783C2482126000FB843E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6564783E2482126000FB843E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6543039A248494D900608D86 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				656478392482126000FB843E /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		6560638F2484955A00E97058 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				656063902484956E00E97058 /* Strings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		656063942484A77B00E97058 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				656063952484A77B00E97058 /* NetworkSetup.swift */,
+				656063962484A77B00E97058 /* APIController.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		656478242482125D00FB843E = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +129,13 @@
 		6564782F2482125D00FB843E /* SwiftProjects */ = {
 			isa = PBXGroup;
 			children = (
-				656478302482125D00FB843E /* AppDelegate.swift */,
-				656478322482125D00FB843E /* SceneDelegate.swift */,
-				656478342482125D00FB843E /* ViewController.swift */,
-				656478362482125D00FB843E /* Main.storyboard */,
-				656478392482126000FB843E /* Assets.xcassets */,
-				6564783B2482126000FB843E /* LaunchScreen.storyboard */,
-				6564783E2482126000FB843E /* Info.plist */,
+				656478582482262400FB843E /* Models */,
+				656478562482232300FB843E /* Modules */,
+				656478552482231E00FB843E /* Utils */,
+				656478542482216F00FB843E /* Extension */,
+				656478572482248A00FB843E /* Resources */,
+				6564785224821E8F00FB843E /* Network */,
+				656478532482210900FB843E /* Supporting Files */,
 			);
 			path = SwiftProjects;
 			sourceTree = "<group>";
@@ -120,6 +147,62 @@
 				656478492482126000FB843E /* Info.plist */,
 			);
 			path = SwiftProjectsTests;
+			sourceTree = "<group>";
+		};
+		6564785224821E8F00FB843E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				656063942484A77B00E97058 /* Config */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		656478532482210900FB843E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6564783B2482126000FB843E /* LaunchScreen.storyboard */,
+				6564783E2482126000FB843E /* Info.plist */,
+				656478302482125D00FB843E /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		656478542482216F00FB843E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		656478552482231E00FB843E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				656063922484A65B00E97058 /* Storyboarded.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		656478562482232300FB843E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		656478572482248A00FB843E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6560638F2484955A00E97058 /* Strings */,
+				6543039A248494D900608D86 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		656478582482262400FB843E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9C5C24C30E69495C68AD1290 /* Frameworks */ = {
@@ -218,7 +301,6 @@
 			files = (
 				6564783D2482126000FB843E /* LaunchScreen.storyboard in Resources */,
 				6564783A2482126000FB843E /* Assets.xcassets in Resources */,
-				656478382482125D00FB843E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,9 +399,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656478352482125D00FB843E /* ViewController.swift in Sources */,
+				656063982484A77B00E97058 /* NetworkSetup.swift in Sources */,
+				656063992484A77B00E97058 /* APIController.swift in Sources */,
+				656063912484956E00E97058 /* Strings.swift in Sources */,
 				656478312482125D00FB843E /* AppDelegate.swift in Sources */,
-				656478332482125D00FB843E /* SceneDelegate.swift in Sources */,
+				656063932484A65B00E97058 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,14 +426,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		656478362482125D00FB843E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				656478372482125D00FB843E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6564783B2482126000FB843E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -480,14 +556,17 @@
 			baseConfigurationReference = 2C88491DB8DD835078C4CC9E /* Pods-SwiftProjects.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "https://api.github.com/";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W4CDBHWB5;
-				INFOPLIST_FILE = SwiftProjects/Info.plist;
+				INFOPLIST_FILE = "SwiftProjects/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = torres.vini.SwiftProjects;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -500,14 +579,17 @@
 			baseConfigurationReference = A33BBD17F2FFC33848D7A057 /* Pods-SwiftProjects.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "https://api.github.com/";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4W4CDBHWB5;
-				INFOPLIST_FILE = SwiftProjects/Info.plist;
+				INFOPLIST_FILE = "SwiftProjects/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = torres.vini.SwiftProjects;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
