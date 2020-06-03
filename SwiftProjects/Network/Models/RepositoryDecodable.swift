@@ -14,7 +14,7 @@ struct RepositoryDecodable: Decodable {
     let name: String
     let description: String
     let owner: OwnerDecodable
-    let stargazersCount: Double
+    let stargazersCount: Int
 
     enum CodingKeys: String, CodingKey {
         case id = "id"

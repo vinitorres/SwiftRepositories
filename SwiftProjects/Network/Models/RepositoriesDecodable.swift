@@ -10,7 +10,7 @@ import Foundation
 
 struct RepositoriesDecodable: Decodable {
 
-    let totalCount: Double
+    let totalCount: Int
     let incompleteResults: Bool
     let repositories: [RepositoryDecodable]
 

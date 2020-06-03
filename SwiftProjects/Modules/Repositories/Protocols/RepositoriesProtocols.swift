@@ -31,6 +31,7 @@ protocol RepositoriesPresenterProtocol: class {
     var router: RepositoriesRouterProtocol! { get set }
     var interactor: RepositoriesInteractorProtocol! { get set }
 
+    func nextPage()
     func refreshRepositoriesList()
     func viewDidLoad()
     

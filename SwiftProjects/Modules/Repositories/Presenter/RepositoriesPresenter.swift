@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 
 final class RepositoriesPresenter: RepositoriesPresenterProtocol {
+
     
     weak var view: RepositoriesViewProtocol!
     var router: RepositoriesRouterProtocol!
@@ -33,14 +34,17 @@ final class RepositoriesPresenter: RepositoriesPresenterProtocol {
         interactor.fetchRepositories(page: currentPage)
             .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] repositories in
-                print("Repositories count : \(repositories.count)")
                 self?.view.hideProgressHud()
                 self?.view.updateRepositoriesList(repositories: repositories)
             }, onError: { [weak self] error in
                 self?.view.hideProgressHud()
             })
         .disposed(by: disposeBag)
-        
+    }
+
+    func nextPage() {
+        currentPage += 1
+        loadData()
     }
     
 }

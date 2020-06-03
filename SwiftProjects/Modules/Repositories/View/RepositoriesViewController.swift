@@ -24,10 +24,12 @@ final class RepositoriesViewController: UIViewController {
         applyLanguage()
         applyStyle()
         setupTableView()
+        setupRefreshControl()
         presenter.viewDidLoad()
     }
     
     // MARK: - Setup Methods
+
     private func setupAccessibilityIdentifiers() {
         tableView.accessibilityIdentifier = "tableView"
     }
@@ -37,26 +39,38 @@ final class RepositoriesViewController: UIViewController {
     }
     
     private func applyStyle() {
-        
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
     }
 
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cellType: RepositoryCell.self)
+        tableView.contentInset = UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 0)
+    }
 
+    private func setupRefreshControl() {
         refreshControl.tintColor = .gray
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         tableView.refreshControl = refreshControl
     }
 
+    // MARK: - Private Methods
+
     func updateRepositoriesList(repositories: [Repository]) {
+        refreshControl.endRefreshing()
         self.repositories.append(contentsOf: repositories)
         tableView.reloadData()
     }
 
-    @objc func didPullToRefresh() {
+    @objc private func didPullToRefresh() {
+        repositories.removeAll()
+        tableView.reloadData()
         presenter.refreshRepositoriesList()
+    }
+
+    private func nextPage() {
+        presenter.nextPage()
     }
     
     
@@ -69,17 +83,13 @@ extension RepositoriesViewController: RepositoriesViewProtocol {
 
 extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource {
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return repositories.count
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return repositories.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: RepositoryCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setup(repository: repositories[indexPath.section])
+        cell.setup(repository: repositories[indexPath.row])
         return cell
     }
 

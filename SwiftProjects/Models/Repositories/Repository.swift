@@ -14,7 +14,7 @@ struct Repository {
     let name: String
     let description: String
     let owner: Owner
-    let stargazersCount: Double
+    let stargazersCount: Int
 
     init(decodable: RepositoryDecodable) {
         id = decodable.id
@@ -29,7 +29,7 @@ struct Repository {
         name = String()
         description = String()
         owner = Owner()
-        stargazersCount = Double()
+        stargazersCount = Int()
     }
 
 }
