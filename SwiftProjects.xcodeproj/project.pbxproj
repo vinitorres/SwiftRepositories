@@ -17,6 +17,10 @@
 		651798DB248544FD004337E9 /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651798DA248544FD004337E9 /* NibReusable.swift */; };
 		651798DE248556AD004337E9 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651798DC248556AD004337E9 /* RepositoryCell.swift */; };
 		651798DF248556AD004337E9 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651798DD248556AD004337E9 /* RepositoryCell.xib */; };
+		65269F262487DE0E000EEE45 /* RepositoryDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F252487DE0E000EEE45 /* RepositoryDecodable.swift */; };
+		65269F282487DFE5000EEE45 /* OwnerDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F272487DFE5000EEE45 /* OwnerDecodable.swift */; };
+		65269F2A2487E111000EEE45 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F292487E111000EEE45 /* Repository.swift */; };
+		65269F2D2487E206000EEE45 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F2C2487E206000EEE45 /* Owner.swift */; };
 		656063912484956E00E97058 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063902484956E00E97058 /* Strings.swift */; };
 		656063932484A65B00E97058 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063922484A65B00E97058 /* Storyboarded.swift */; };
 		656063982484A77B00E97058 /* NetworkSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063952484A77B00E97058 /* NetworkSetup.swift */; };
@@ -55,6 +59,10 @@
 		651798DA248544FD004337E9 /* NibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
 		651798DC248556AD004337E9 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		651798DD248556AD004337E9 /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
+		65269F252487DE0E000EEE45 /* RepositoryDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDecodable.swift; sourceTree = "<group>"; };
+		65269F272487DFE5000EEE45 /* OwnerDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerDecodable.swift; sourceTree = "<group>"; };
+		65269F292487E111000EEE45 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		65269F2C2487E206000EEE45 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		656063902484956E00E97058 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		656063922484A65B00E97058 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		656063952484A77B00E97058 /* NetworkSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSetup.swift; sourceTree = "<group>"; };
@@ -126,8 +134,8 @@
 		651798D3248540EA004337E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				651798C524854030004337E9 /* Repositories.storyboard */,
 				651798C824854030004337E9 /* RepositoriesViewController.swift */,
+				651798C524854030004337E9 /* Repositories.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +187,24 @@
 				651798DD248556AD004337E9 /* RepositoryCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		65269F242487DDFD000EEE45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65269F252487DE0E000EEE45 /* RepositoryDecodable.swift */,
+				65269F272487DFE5000EEE45 /* OwnerDecodable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65269F2B2487E114000EEE45 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				65269F292487E111000EEE45 /* Repository.swift */,
+				65269F2C2487E206000EEE45 /* Owner.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		6543039A248494D900608D86 /* Images */ = {
@@ -263,6 +289,7 @@
 		6564785224821E8F00FB843E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				65269F242487DDFD000EEE45 /* Models */,
 				656063942484A77B00E97058 /* Config */,
 			);
 			path = Network;
@@ -315,6 +342,7 @@
 		656478582482262400FB843E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				65269F2B2487E114000EEE45 /* Repositories */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -517,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				651798DB248544FD004337E9 /* NibReusable.swift in Sources */,
+				65269F282487DFE5000EEE45 /* OwnerDecodable.swift in Sources */,
 				651798CF24854030004337E9 /* RepositoriesViewController.swift in Sources */,
 				656063A32484AF8100E97058 /* UIColor+HexString.swift in Sources */,
 				656063982484A77B00E97058 /* NetworkSetup.swift in Sources */,
@@ -526,9 +555,12 @@
 				651798CD24854030004337E9 /* RepositoriesPresenter.swift in Sources */,
 				651798D224854030004337E9 /* RepositoriesRemoteDataManager.swift in Sources */,
 				656063912484956E00E97058 /* Strings.swift in Sources */,
+				65269F2A2487E111000EEE45 /* Repository.swift in Sources */,
 				651798D024854030004337E9 /* RepositoriesProtocols.swift in Sources */,
+				65269F2D2487E206000EEE45 /* Owner.swift in Sources */,
 				651798CE24854030004337E9 /* RepositoriesRouter.swift in Sources */,
 				656478312482125D00FB843E /* AppDelegate.swift in Sources */,
+				65269F262487DE0E000EEE45 /* RepositoryDecodable.swift in Sources */,
 				656063932484A65B00E97058 /* Storyboarded.swift in Sources */,
 				656063A62484AF8100E97058 /* UIStoryboard+Instantiate.swift in Sources */,
 				651798DE248556AD004337E9 /* RepositoryCell.swift in Sources */,

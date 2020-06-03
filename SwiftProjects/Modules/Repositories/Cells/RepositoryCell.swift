@@ -10,8 +10,16 @@ import UIKit
 
 final class RepositoryCell: UITableViewCell, NibReusable {
 
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var labelAuthor: UILabel!
+    @IBOutlet weak var labelStarsCount: UILabel!
+    @IBOutlet weak var imageViewAvatar: UIImageView!
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        applyStyles()
         // Initialization code
     }
 
@@ -19,7 +27,16 @@ final class RepositoryCell: UITableViewCell, NibReusable {
         super.setSelected(selected, animated: animated)
     }
 
-    func setup(repository: Any) {
+    func setup(repository: Repository) {
+        labelTitle.text = repository.name
+
+        labelDescription.text = repository.description
+        labelAuthor.text = repository.owner.login
+        labelStarsCount.text = repository.stargazersCount.description
+        //imageViewAvatar
+    }
+
+    private func applyStyles() {
 
     }
     

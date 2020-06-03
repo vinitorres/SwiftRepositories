@@ -9,5 +9,10 @@
 import Foundation
 
 final class RepositoriesRemoteDataManager: RepositoriesRemoteDataManagerProtocol {
+
+    func fetchRepositories() {
+
+    }
+
     
 }

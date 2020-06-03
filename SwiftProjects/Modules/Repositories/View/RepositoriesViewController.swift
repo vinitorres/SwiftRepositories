@@ -21,6 +21,7 @@ final class RepositoriesViewController: UIViewController {
         applyLanguage()
         applyStyle()
         setupTableView()
+        presenter.viewDidLoad()
     }
     
     // MARK: - Setup Methods
@@ -52,12 +53,12 @@ extension RepositoriesViewController: RepositoriesViewProtocol {
 extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: RepositoryCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setup(repository: String())
+        cell.setup(repository: Repository())
         return cell
     }
 

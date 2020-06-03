@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 final class RepositoriesInteractor: RepositoriesInteractorProtocol {
     
@@ -14,6 +15,10 @@ final class RepositoriesInteractor: RepositoriesInteractorProtocol {
     
     init(remoteDataManager: RepositoriesRemoteDataManagerProtocol) {
         self.remoteDataManager = remoteDataManager
+    }
+
+    func loadData() {
+
     }
     
 }
