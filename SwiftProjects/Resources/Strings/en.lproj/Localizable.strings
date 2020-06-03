@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  SwiftProjects
+
+  Created by Andre Vinicius Torres Conrado on 01/06/20.
+  Copyright © 2020 Andre Vinicius Torres Conrado. All rights reserved.
+*/
+
+// MARK: - Repositories
+repositoriesTitle = "Repositories";

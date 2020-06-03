@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func setupFirstScreen() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let initialScreen = UIViewController()
+        let initialScreen = RepositoriesRouter.assembleModule()
         let navigationController = UINavigationController(rootViewController: initialScreen)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
