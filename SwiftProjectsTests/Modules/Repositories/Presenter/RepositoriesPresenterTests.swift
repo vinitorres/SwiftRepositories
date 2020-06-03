@@ -1,15 +1,15 @@
 //
-//  SwiftProjectsTests.swift
+//  RepositoriesPresenterTests.swift
 //  SwiftProjectsTests
 //
-//  Created by Andre Vinicius Torres Conrado on 30/05/20.
+//  Created by Andre Vinicius Torres Conrado on 03/06/20.
 //  Copyright © 2020 Andre Vinicius Torres Conrado. All rights reserved.
 //
 
 import XCTest
-@testable import SwiftProjects
+import Nimble
 
-class SwiftProjectsTests: XCTestCase {
+class RepositoriesPresenterTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

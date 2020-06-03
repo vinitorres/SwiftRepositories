@@ -34,8 +34,9 @@
 		656478312482125D00FB843E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656478302482125D00FB843E /* AppDelegate.swift */; };
 		6564783A2482126000FB843E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656478392482126000FB843E /* Assets.xcassets */; };
 		6564783D2482126000FB843E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6564783B2482126000FB843E /* LaunchScreen.storyboard */; };
-		656478482482126000FB843E /* SwiftProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656478472482126000FB843E /* SwiftProjectsTests.swift */; };
 		6564F4C92485A46B00F0F272 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6564F4CB2485A46B00F0F272 /* Localizable.strings */; };
+		65A72FAE2488551B000FA7BC /* RepositoriesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A72FAD2488551B000FA7BC /* RepositoriesInteractorTests.swift */; };
+		65A72FB024885557000FA7BC /* RepositoriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A72FAF24885557000FA7BC /* RepositoriesPresenterTests.swift */; };
 		8AF0D61459A31DB97BC756D7 /* Pods_SwiftProjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAC8D2F90999CA98BB70C5C /* Pods_SwiftProjects.framework */; };
 		BC1CAA489260AA1B954E13DF /* Pods_SwiftProjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E631632E88AA978C22B543 /* Pods_SwiftProjectsTests.framework */; };
 /* End PBXBuildFile section */
@@ -82,9 +83,11 @@
 		6564783C2482126000FB843E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6564783E2482126000FB843E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656478432482126000FB843E /* SwiftProjectsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftProjectsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		656478472482126000FB843E /* SwiftProjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProjectsTests.swift; sourceTree = "<group>"; };
 		656478492482126000FB843E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6564F4CA2485A46B00F0F272 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65A72FAC2488551B000FA7BC /* SwiftProjectsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjectsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		65A72FAD2488551B000FA7BC /* RepositoriesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesInteractorTests.swift; sourceTree = "<group>"; };
+		65A72FAF24885557000FA7BC /* RepositoriesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresenterTests.swift; sourceTree = "<group>"; };
 		6EAC8D2F90999CA98BB70C5C /* Pods_SwiftProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA020D48DDC5C25CDBCEAB0 /* Pods-SwiftProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectsTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProjectsTests/Pods-SwiftProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A33BBD17F2FFC33848D7A057 /* Pods-SwiftProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjects.release.xcconfig"; path = "Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects.release.xcconfig"; sourceTree = "<group>"; };
@@ -304,8 +307,9 @@
 		656478462482126000FB843E /* SwiftProjectsTests */ = {
 			isa = PBXGroup;
 			children = (
-				656478472482126000FB843E /* SwiftProjectsTests.swift */,
+				65A72FA7248850D4000FA7BC /* Modules */,
 				656478492482126000FB843E /* Info.plist */,
+				65A72FAC2488551B000FA7BC /* SwiftProjectsTests-Bridging-Header.h */,
 			);
 			path = SwiftProjectsTests;
 			sourceTree = "<group>";
@@ -370,6 +374,47 @@
 				65269F2B2487E114000EEE45 /* Repositories */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		65A72FA7248850D4000FA7BC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				65A72FA8248850E1000FA7BC /* Repositories */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		65A72FA8248850E1000FA7BC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				65A72FAB248850F8000FA7BC /* Interactor */,
+				65A72FAA248850F3000FA7BC /* Presenter */,
+				65A72FA9248850EC000FA7BC /* Mocks */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		65A72FA9248850EC000FA7BC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		65A72FAA248850F3000FA7BC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				65A72FAF24885557000FA7BC /* RepositoriesPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		65A72FAB248850F8000FA7BC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				65A72FAD2488551B000FA7BC /* RepositoriesInteractorTests.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		9C5C24C30E69495C68AD1290 /* Frameworks */ = {
@@ -438,6 +483,7 @@
 					};
 					656478422482126000FB843E = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 						TestTargetID = 6564782C2482125D00FB843E;
 					};
 				};
@@ -599,7 +645,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656478482482126000FB843E /* SwiftProjectsTests.swift in Sources */,
+				65A72FB024885557000FA7BC /* RepositoriesPresenterTests.swift in Sources */,
+				65A72FAE2488551B000FA7BC /* RepositoriesInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +846,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4W4CDBHWB5;
 				INFOPLIST_FILE = SwiftProjectsTests/Info.plist;
@@ -810,6 +858,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = torres.vini.SwiftProjectsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProjectsTests/Modules/Repositories/Interactor/SwiftProjectsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftProjects.app/SwiftProjects";
@@ -822,6 +872,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4W4CDBHWB5;
 				INFOPLIST_FILE = SwiftProjectsTests/Info.plist;
@@ -833,6 +884,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = torres.vini.SwiftProjectsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProjectsTests/Modules/Repositories/Interactor/SwiftProjectsTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftProjects.app/SwiftProjects";
