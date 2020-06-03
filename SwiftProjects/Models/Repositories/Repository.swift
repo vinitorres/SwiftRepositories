@@ -22,7 +22,6 @@ struct Repository {
         description = decodable.description
         owner = Owner(decodable: decodable.owner)
         stargazersCount = decodable.stargazersCount
-
     }
 
     init() {

@@ -7,12 +7,25 @@
 //
 
 import Foundation
+import RxSwift
 
 final class RepositoriesRemoteDataManager: RepositoriesRemoteDataManagerProtocol {
 
-    func fetchRepositories() {
+    private let repositoriesService: RepositoriesServiceProtocol
+    private let scheduler = ConcurrentDispatchQueueScheduler(qos: .userInitiated)
 
+    init(repositoriesService: RepositoriesServiceProtocol = RepositoriesService()) {
+        self.repositoriesService = repositoriesService
     }
 
+
+    func fetchRepositories(page: Int) -> Single<[Repository]> {
+        return repositoriesService.getSwiftRepositories(page: page, scheduler: scheduler)
+            .map { repositoriesDecodableList in
+                return repositoriesDecodableList.repositories.map {
+                    Repository(decodable: $0)
+                }
+        }
+    }
     
 }

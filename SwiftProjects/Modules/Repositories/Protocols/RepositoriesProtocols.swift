@@ -13,15 +13,15 @@ import RxSwift
 // MARK: - Interactor
 protocol RepositoriesInteractorProtocol: class {
 
-    func loadData() 
+    func fetchRepositories(page: Int) -> Single<[Repository]>
     
 }
 
 // MARK: - DataManager
 protocol RepositoriesRemoteDataManagerProtocol: class {
 
-    func fetchRepositories()
-
+    func fetchRepositories(page: Int) -> Single<[Repository]>
+    
 }
 
 // MARK: - Presenter
@@ -31,6 +31,7 @@ protocol RepositoriesPresenterProtocol: class {
     var router: RepositoriesRouterProtocol! { get set }
     var interactor: RepositoriesInteractorProtocol! { get set }
 
+    func refreshRepositoriesList()
     func viewDidLoad()
     
 }
@@ -40,6 +41,7 @@ protocol RepositoriesViewProtocol: class {
     
     var presenter: RepositoriesPresenterProtocol! { get set }
 
+    func updateRepositoriesList(repositories: [Repository])
     func showProgressHud()
     func hideProgressHud()
     

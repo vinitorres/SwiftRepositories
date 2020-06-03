@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 final class RepositoryCell: UITableViewCell, NibReusable {
 
@@ -29,15 +30,19 @@ final class RepositoryCell: UITableViewCell, NibReusable {
 
     func setup(repository: Repository) {
         labelTitle.text = repository.name
-
         labelDescription.text = repository.description
         labelAuthor.text = repository.owner.login
         labelStarsCount.text = repository.stargazersCount.description
-        //imageViewAvatar
+        imageViewAvatar.af_setImage(withURL: URL(string: repository.owner.avatarUrl)!)
     }
 
     private func applyStyles() {
 
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 0.5
+        layer.cornerRadius = 8
+
+        imageViewAvatar.layer.cornerRadius = imageViewAvatar.frame.size.height/2
     }
     
 }

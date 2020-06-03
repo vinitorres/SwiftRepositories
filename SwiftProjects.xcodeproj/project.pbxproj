@@ -21,6 +21,9 @@
 		65269F282487DFE5000EEE45 /* OwnerDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F272487DFE5000EEE45 /* OwnerDecodable.swift */; };
 		65269F2A2487E111000EEE45 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F292487E111000EEE45 /* Repository.swift */; };
 		65269F2D2487E206000EEE45 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F2C2487E206000EEE45 /* Owner.swift */; };
+		65269F322487E852000EEE45 /* RepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F302487E852000EEE45 /* RepositoriesService.swift */; };
+		65269F332487E852000EEE45 /* RepositoriesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F312487E852000EEE45 /* RepositoriesServiceProtocol.swift */; };
+		65269F352487F04B000EEE45 /* RepositoriesDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65269F342487F04B000EEE45 /* RepositoriesDecodable.swift */; };
 		656063912484956E00E97058 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063902484956E00E97058 /* Strings.swift */; };
 		656063932484A65B00E97058 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063922484A65B00E97058 /* Storyboarded.swift */; };
 		656063982484A77B00E97058 /* NetworkSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656063952484A77B00E97058 /* NetworkSetup.swift */; };
@@ -63,6 +66,9 @@
 		65269F272487DFE5000EEE45 /* OwnerDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerDecodable.swift; sourceTree = "<group>"; };
 		65269F292487E111000EEE45 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		65269F2C2487E206000EEE45 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		65269F302487E852000EEE45 /* RepositoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesService.swift; sourceTree = "<group>"; };
+		65269F312487E852000EEE45 /* RepositoriesServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesServiceProtocol.swift; sourceTree = "<group>"; };
+		65269F342487F04B000EEE45 /* RepositoriesDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDecodable.swift; sourceTree = "<group>"; };
 		656063902484956E00E97058 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		656063922484A65B00E97058 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		656063952484A77B00E97058 /* NetworkSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSetup.swift; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 		65269F242487DDFD000EEE45 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				65269F342487F04B000EEE45 /* RepositoriesDecodable.swift */,
 				65269F252487DE0E000EEE45 /* RepositoryDecodable.swift */,
 				65269F272487DFE5000EEE45 /* OwnerDecodable.swift */,
 			);
@@ -203,6 +210,23 @@
 			children = (
 				65269F292487E111000EEE45 /* Repository.swift */,
 				65269F2C2487E206000EEE45 /* Owner.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		65269F2E2487E811000EEE45 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				65269F2F2487E81B000EEE45 /* Repositories */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		65269F2F2487E81B000EEE45 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				65269F312487E852000EEE45 /* RepositoriesServiceProtocol.swift */,
+				65269F302487E852000EEE45 /* RepositoriesService.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -289,6 +313,7 @@
 		6564785224821E8F00FB843E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				65269F2E2487E811000EEE45 /* Services */,
 				65269F242487DDFD000EEE45 /* Models */,
 				656063942484A77B00E97058 /* Config */,
 			);
@@ -545,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				651798DB248544FD004337E9 /* NibReusable.swift in Sources */,
+				65269F352487F04B000EEE45 /* RepositoriesDecodable.swift in Sources */,
 				65269F282487DFE5000EEE45 /* OwnerDecodable.swift in Sources */,
 				651798CF24854030004337E9 /* RepositoriesViewController.swift in Sources */,
 				656063A32484AF8100E97058 /* UIColor+HexString.swift in Sources */,
@@ -557,6 +583,8 @@
 				656063912484956E00E97058 /* Strings.swift in Sources */,
 				65269F2A2487E111000EEE45 /* Repository.swift in Sources */,
 				651798D024854030004337E9 /* RepositoriesProtocols.swift in Sources */,
+				65269F332487E852000EEE45 /* RepositoriesServiceProtocol.swift in Sources */,
+				65269F322487E852000EEE45 /* RepositoriesService.swift in Sources */,
 				65269F2D2487E206000EEE45 /* Owner.swift in Sources */,
 				651798CE24854030004337E9 /* RepositoriesRouter.swift in Sources */,
 				656478312482125D00FB843E /* AppDelegate.swift in Sources */,
@@ -724,7 +752,7 @@
 			baseConfigurationReference = 2C88491DB8DD835078C4CC9E /* Pods-SwiftProjects.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				BASE_URL = "https://api.github.com/";
+				BASE_URL = "https://api.github.com";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -747,7 +775,7 @@
 			baseConfigurationReference = A33BBD17F2FFC33848D7A057 /* Pods-SwiftProjects.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				BASE_URL = "https://api.github.com/";
+				BASE_URL = "https://api.github.com";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";

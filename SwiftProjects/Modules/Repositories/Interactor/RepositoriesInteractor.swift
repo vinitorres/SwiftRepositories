@@ -17,8 +17,8 @@ final class RepositoriesInteractor: RepositoriesInteractorProtocol {
         self.remoteDataManager = remoteDataManager
     }
 
-    func loadData() {
-
+    func fetchRepositories(page: Int) -> Single<[Repository]> {
+        return remoteDataManager.fetchRepositories(page: page)
     }
     
 }

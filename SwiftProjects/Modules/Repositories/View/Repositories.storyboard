@@ -19,6 +19,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ll5-fW-6Zv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,6 +27,7 @@
                             <constraint firstItem="Ll5-fW-6Zv" firstAttribute="leading" secondItem="aXq-9p-Cmq" secondAttribute="leading" id="42T-Ao-BIv"/>
                             <constraint firstItem="aXq-9p-Cmq" firstAttribute="trailing" secondItem="Ll5-fW-6Zv" secondAttribute="trailing" id="Iyy-1m-YZh"/>
                             <constraint firstItem="Ll5-fW-6Zv" firstAttribute="top" secondItem="aXq-9p-Cmq" secondAttribute="top" id="T9b-Dz-CwK"/>
+                            <constraint firstItem="Ll5-fW-6Zv" firstAttribute="width" secondItem="QGW-aA-myz" secondAttribute="width" id="jvI-uZ-Mty"/>
                             <constraint firstItem="aXq-9p-Cmq" firstAttribute="bottom" secondItem="Ll5-fW-6Zv" secondAttribute="bottom" id="s5Y-AN-KuS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aXq-9p-Cmq"/>

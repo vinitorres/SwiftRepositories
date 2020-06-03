@@ -17,17 +17,30 @@ final class RepositoriesPresenter: RepositoriesPresenterProtocol {
 
     private let disposeBag = DisposeBag()
 
+    var currentPage = 1
+
     func viewDidLoad() {
+        loadData()
+    }
+
+    func refreshRepositoriesList() {
+        currentPage = 1
         loadData()
     }
 
     private func loadData() {
         view.showProgressHud()
-
-        //TODO:
-
-        view.hideProgressHud()
-
+        interactor.fetchRepositories(page: currentPage)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onSuccess: { [weak self] repositories in
+                print("Repositories count : \(repositories.count)")
+                self?.view.hideProgressHud()
+                self?.view.updateRepositoriesList(repositories: repositories)
+            }, onError: { [weak self] error in
+                self?.view.hideProgressHud()
+            })
+        .disposed(by: disposeBag)
+        
     }
     
 }
