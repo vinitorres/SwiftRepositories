@@ -57,12 +57,6 @@ final class RepositoriesViewController: UIViewController {
 
     // MARK: - Private Methods
 
-    func updateRepositoriesList(repositories: [Repository]) {
-        refreshControl.endRefreshing()
-        self.repositories.append(contentsOf: repositories)
-        tableView.reloadData()
-    }
-
     @objc private func didPullToRefresh() {
         repositories.removeAll()
         tableView.reloadData()
@@ -78,6 +72,13 @@ final class RepositoriesViewController: UIViewController {
 
 // MARK: - RepositoriesViewProtocol
 extension RepositoriesViewController: RepositoriesViewProtocol {
+
+    func updateRepositoriesList(repositories: [Repository]) {
+        self.repositories.append(contentsOf: repositories)
+        refreshControl.endRefreshing()
+        hideProgressHud()
+        tableView.reloadData()
+    }
     
 }
 
@@ -91,6 +92,12 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
         let cell: RepositoryCell = tableView.dequeueReusableCell(for: indexPath)
         cell.setup(repository: repositories[indexPath.row])
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == repositories.count - 1 {
+            presenter.nextPage()
+        }
     }
 
 }

@@ -1,9 +1,9 @@
 //
 //  RepositoriesService.swift
-//  Bridge
+//  SwiftProjects
 //
-//  Created by Andre Vinicius Torres Conrado on 13/05/20.
-//  Copyright © 2020 Redspark. All rights reserved.
+//  Created by Andre Vinicius Torres Conrado on 03/06/20.
+//  Copyright © 2020 Andre Vinicius Torres Conrado. All rights reserved.
 //
 
 import Foundation
@@ -15,7 +15,7 @@ import CodableAlamofire
 final class RepositoriesService: RepositoriesServiceProtocol {
 
     private enum API: String, ServiceApi {
-        case searchSwiftRepositories = "search/repositories?q=language:swift&sort=stars"
+        case searchSwiftRepositories = "search/repositories?q=language:swift&sort=stars&page={page}"
     }
 
     private let requestManager: RequestManagerProtocol
@@ -25,7 +25,7 @@ final class RepositoriesService: RepositoriesServiceProtocol {
     }
     
     func getSwiftRepositories(page: Int, scheduler: ImmediateSchedulerType?) -> Single<RepositoriesDecodable> {
-        let endpoint = Endpoint(method: .get, api: API.searchSwiftRepositories)
+        let endpoint = Endpoint(method: .get, api: API.searchSwiftRepositories, pathParameters: ["page": page.description])
         return requestManager.request(endpoint: endpoint)
         .asSingle(scheduler: scheduler)
     }

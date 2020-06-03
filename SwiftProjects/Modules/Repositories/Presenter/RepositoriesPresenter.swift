@@ -17,6 +17,7 @@ final class RepositoriesPresenter: RepositoriesPresenterProtocol {
     var interactor: RepositoriesInteractorProtocol!
 
     private let disposeBag = DisposeBag()
+    private var isLoading: Bool = false
 
     var currentPage = 1
 
@@ -30,21 +31,24 @@ final class RepositoriesPresenter: RepositoriesPresenterProtocol {
     }
 
     private func loadData() {
-        view.showProgressHud()
         interactor.fetchRepositories(page: currentPage)
             .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] repositories in
-                self?.view.hideProgressHud()
+                self?.isLoading = false
                 self?.view.updateRepositoriesList(repositories: repositories)
             }, onError: { [weak self] error in
                 self?.view.hideProgressHud()
+                self?.isLoading = false
             })
         .disposed(by: disposeBag)
     }
 
     func nextPage() {
-        currentPage += 1
-        loadData()
+        if !isLoading {
+            currentPage += 1
+            isLoading = true
+            loadData()
+        }
     }
     
 }
