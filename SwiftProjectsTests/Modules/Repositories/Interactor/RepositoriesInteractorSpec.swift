@@ -27,7 +27,7 @@ class RepositoriesInteractorSpec: QuickSpec {
 
         context("Called Methods") {
 
-            it("Should fetchMovies be called") {
+            it("Should fetchRepositories be called") {
                 _ = sut.fetchRepositories(page: Int())
                 expect(sut.fetchRepositoriesCalled).to(beTrue())
             }
