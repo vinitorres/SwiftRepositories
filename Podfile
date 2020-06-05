@@ -9,7 +9,9 @@ def shared_pods
 end
 
 def shared_tests_pods
-  pod 'Nimble', '~> 7.3.1'
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'RxNimble/RxTest'
 end
 
 target 'SwiftProjects' do
