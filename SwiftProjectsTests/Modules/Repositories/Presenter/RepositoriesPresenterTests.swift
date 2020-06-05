@@ -8,27 +8,63 @@
 
 import XCTest
 import Nimble
+import Quick
+@testable import SwiftProjects
 
-class RepositoriesPresenterTests: XCTestCase {
+class RepositoriesPresenterSpec: QuickSpec {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    override func spec() {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        var sut: RepositoriesPresenterMock!
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        beforeEach {
+            sut = RepositoriesPresenterMock()
+            sut.router = RepositoriesRouterMock()
+            sut.view = RepositoriesViewControllerMock()
+            sut.interactor = RepositoriesInteractorMock()
         }
+
+        afterEach {
+            sut = nil
+        }
+
+        context("Verify Viper Properties") {
+
+            it("Should interactor not be nil") {
+                expect(sut.interactor).toNot(beNil())
+            }
+
+            it("Should router not be nil") {
+                expect(sut.router).toNot(beNil())
+            }
+
+            it("Should view not be nil") {
+                expect(sut.view).toNot(beNil())
+            }
+
+        }
+
+        context("Methods called") {
+
+            it("Should nextPageCalled true") {
+                sut.nextPage()
+                expect(sut.nextPageCalled).to(beTrue())
+            }
+
+            it("Should viewDidLoadCalled true") {
+                sut.viewDidLoad()
+                expect(sut.viewDidLoadCalled).to(beTrue())
+            }
+
+
+            it("Should refreshRepositoriesListCalled true") {
+                sut.refreshRepositoriesList()
+                expect(sut.refreshRepositoriesListCalled).to(beTrue())
+            }
+
+
+        }
+
     }
 
 }

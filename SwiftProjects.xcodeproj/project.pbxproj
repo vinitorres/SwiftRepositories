@@ -35,8 +35,8 @@
 		6564783A2482126000FB843E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656478392482126000FB843E /* Assets.xcassets */; };
 		6564783D2482126000FB843E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6564783B2482126000FB843E /* LaunchScreen.storyboard */; };
 		6564F4C92485A46B00F0F272 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6564F4CB2485A46B00F0F272 /* Localizable.strings */; };
+		658EF4E32489DD580021EB17 /* repositoriesJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 65A229E92489D255009BAA8B /* repositoriesJSON.json */; };
 		65A229EA2489D255009BAA8B /* repositoriesJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 65A229E92489D255009BAA8B /* repositoriesJSON.json */; };
-		65A229EC2489D36C009BAA8B /* MoviesJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 65A229EB2489D36C009BAA8B /* MoviesJSON.json */; };
 		65A72FAE2488551B000FA7BC /* RepositoriesInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A72FAD2488551B000FA7BC /* RepositoriesInteractorSpec.swift */; };
 		65A72FB024885557000FA7BC /* RepositoriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A72FAF24885557000FA7BC /* RepositoriesPresenterTests.swift */; };
 		65A72FBC24889103000FA7BC /* RepositoriesServicesSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A72FBB24889103000FA7BC /* RepositoriesServicesSuccessMock.swift */; };
@@ -96,7 +96,6 @@
 		656478492482126000FB843E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6564F4CA2485A46B00F0F272 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65A229E92489D255009BAA8B /* repositoriesJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = repositoriesJSON.json; sourceTree = "<group>"; };
-		65A229EB2489D36C009BAA8B /* MoviesJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MoviesJSON.json; sourceTree = "<group>"; };
 		65A72FAC2488551B000FA7BC /* SwiftProjectsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjectsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		65A72FAD2488551B000FA7BC /* RepositoriesInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesInteractorSpec.swift; sourceTree = "<group>"; };
 		65A72FAF24885557000FA7BC /* RepositoriesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresenterTests.swift; sourceTree = "<group>"; };
@@ -418,7 +417,6 @@
 		65A72FA9248850EC000FA7BC /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				65A229EB2489D36C009BAA8B /* MoviesJSON.json */,
 				65A229E92489D255009BAA8B /* repositoriesJSON.json */,
 				65A72FBA248890EA000FA7BC /* Services */,
 				65A72FB8248890D0000FA7BC /* Router */,
@@ -601,6 +599,7 @@
 				6564F4C92485A46B00F0F272 /* Localizable.strings in Resources */,
 				6564783D2482126000FB843E /* LaunchScreen.storyboard in Resources */,
 				651798CC24854030004337E9 /* Repositories.storyboard in Resources */,
+				658EF4E32489DD580021EB17 /* repositoriesJSON.json in Resources */,
 				6564783A2482126000FB843E /* Assets.xcassets in Resources */,
 				651798DF248556AD004337E9 /* RepositoryCell.xib in Resources */,
 			);
@@ -610,7 +609,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65A229EC2489D36C009BAA8B /* MoviesJSON.json in Resources */,
 				65A229EA2489D255009BAA8B /* repositoriesJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

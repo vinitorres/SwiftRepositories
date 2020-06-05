@@ -32,6 +32,7 @@ class RepositoriesRemoteDataManagerMock: RepositoriesRemoteDataManagerProtocol {
 
     func fetchRepositoriesDidSucceed() {
         fetchRepositoriesDidSucceedCalled = true
+
     }
 
     func fetchMoviesDidFailed(_ error: Error) {

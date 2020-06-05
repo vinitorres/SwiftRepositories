@@ -25,14 +25,6 @@ class RepositoriesInteractorSpec: QuickSpec {
             sut = nil
         }
 
-        //           context("Verify Properties") {
-        //
-        //               it("Should Viper Properties not be nil") {
-        //                expect(sut.fetchRepositoriesCalled).toNot(beNil())
-        //               }
-        //
-        //           }
-
         context("Called Methods") {
 
             it("Should fetchMovies be called") {
